@@ -310,27 +310,6 @@ class _TimeSheetScreenState extends State<TimeSheetScreen> {
                                       //   ),
                                       // ),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                       InkWell(
                                         onTap: () {
                                           showDialog(
@@ -338,31 +317,43 @@ class _TimeSheetScreenState extends State<TimeSheetScreen> {
                                             builder: (context) {
                                               return Dialog(
                                                 shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(12),
+                                                  borderRadius:
+                                                      BorderRadius.circular(12),
                                                 ),
                                                 child: Container(
                                                   color: backgroundColor,
                                                   height: 400,
                                                   width: 320,
                                                   child: TableCalendar(
-                                                    firstDay: DateTime.utc(2020, 1, 1),
-                                                    lastDay: DateTime.utc(2030, 12, 31),
-                                                    focusedDay: _controller.selectedDate.value,
-                                                    selectedDayPredicate: (day) => isSameDay(
-                                                      _controller.selectedDate.value,
+                                                    firstDay: DateTime.utc(
+                                                        2020, 1, 1),
+                                                    lastDay: DateTime.utc(
+                                                        2030, 12, 31),
+                                                    focusedDay: _controller
+                                                        .selectedDate.value,
+                                                    selectedDayPredicate:
+                                                        (day) => isSameDay(
+                                                      _controller
+                                                          .selectedDate.value,
                                                       day,
                                                     ),
-                                                    onDaySelected: (selectedDay, focusedDay) {
+                                                    onDaySelected: (selectedDay,
+                                                        focusedDay) {
                                                       // Update the selected date
-                                                      _controller.selectedDate.value = selectedDay;
+                                                      _controller.selectedDate
+                                                          .value = selectedDay;
 
                                                       // Close the dialog after selecting a date
                                                       Navigator.pop(context);
                                                     },
-                                                    calendarStyle: CalendarStyle(
-                                                      selectedDecoration: BoxDecoration(
-                                                        gradient: gradientButtonColor1,
-                                                        shape: BoxShape.rectangle,
+                                                    calendarStyle:
+                                                        CalendarStyle(
+                                                      selectedDecoration:
+                                                          BoxDecoration(
+                                                        gradient:
+                                                            gradientButtonColor1,
+                                                        shape:
+                                                            BoxShape.rectangle,
                                                       ),
                                                     ),
                                                   ),
@@ -372,27 +363,14 @@ class _TimeSheetScreenState extends State<TimeSheetScreen> {
                                           );
                                         },
                                         child: Obx(() => ColorText(
-                                          size: 14,
-                                          text: DateFormat('d MMMM y').format(_controller.selectedDate.value),
-                                          textAlign: TextAlign.center,
-                                          weight: FontWeight.w500,
-                                        )),
+                                              size: 14,
+                                              text: DateFormat('d MMMM y')
+                                                  .format(_controller
+                                                      .selectedDate.value),
+                                              textAlign: TextAlign.center,
+                                              weight: FontWeight.w500,
+                                            )),
                                       ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                                       GestureDetector(
                                         onTap: _controller.incrementDate,
@@ -479,15 +457,7 @@ class _TimeSheetScreenState extends State<TimeSheetScreen> {
                     //         ),
                     //       )),
                     // ),
-
-
-
-
-
-
-
-                    Text("aslnkjdnclksdnc")
-,                    SizedBox(
+                    SizedBox(
                       height: 200,
                       width: 280,
                       child: Row(
